@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "229209638222",
+    "project_id": "cinevanta",
+    "storage_bucket": "cinevanta.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229209638222:android:c5130377181f446d064a1f",
+        "android_client_info": {
+          "package_name": "com.example.movieapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCYelk2KASyE0dVwHUJK1G_LqnI3Yvg2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

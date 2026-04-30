@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_auth" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/auth_overlay_background" />
+
+    <ScrollView
+        android:id="@+id/home_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/home_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="132dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/logo" />
+
+                <ImageView
+                    android:id="@+id/home_header_profile_button"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/auth_back_button_background"
+                    android:clickable="true"
+                    android:contentDescription="@string/profile_label"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:src="@drawable/profile"
+                    android:tint="@color/auth_text_primary" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/auth_input_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/search"
+                    android:tint="@color/auth_icon_tint" />
+
+                <EditText
+                    android:id="@+id/home_search_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/home_search_hint"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/auth_text_primary"
+                    android:textColorHint="@color/auth_hint"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/filter"
+                    android:tint="@color/auth_icon_tint" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="22dp"
+                app:cardBackgroundColor="@color/home_surface"
+                app:cardCornerRadius="26dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#40FFFFFF"
+                app:strokeWidth="1dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/featured_backdrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bg_auth" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/home_featured_overlay" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:padding="18dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_featured_chip_background"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/featured_label"
+                            android:textAllCaps="true"
+                            android:textColor="@color/auth_text_primary"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/featured_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="serif"
+                            android:maxLines="2"
+                            android:textColor="@color/auth_text_primary"
+                            android:textSize="28sp"
+                            android:textStyle="bold"
+                            tools:text="Dune: Part Two" />
+
+                        <TextView
+                            android:id="@+id/featured_overview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="3"
+                            android:textColor="@color/auth_text_secondary"
+                            android:textSize="15sp"
+                            tools:text="Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators." />
+
+                        <LinearLayout
+                            android:id="@+id/featured_meta_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:background="@drawable/auth_login_button_background"
+                                android:backgroundTint="@null"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/play"
+                                android:drawableTint="@color/auth_text_primary"
+                                android:elevation="0dp"
+                                android:paddingStart="18dp"
+                                android:paddingEnd="18dp"
+                                android:text="@string/watch_now"
+                                android:textAllCaps="false"
+                                android:textColor="@color/auth_text_primary"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="42dp"
+                                android:layout_marginStart="12dp"
+                                android:background="@drawable/auth_social_button_background"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingStart="14dp"
+                                android:paddingEnd="14dp">
+
+                                <TextView
+                                    android:id="@+id/featured_rating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/auth_link"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:text="8.8" />
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="14dp"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:background="@color/auth_divider" />
+
+                                <TextView
+                                    android:id="@+id/featured_year"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/auth_text_primary"
+                                    android:textSize="15sp"
+                                    tools:text="2024" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <include
+                layout="@layout/home_section_trending" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trending_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:paddingTop="14dp"
+                android:paddingBottom="6dp" />
+
+            <include
+                layout="@layout/home_section_popular" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popular_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:paddingTop="14dp"
+                android:paddingBottom="6dp" />
+
+            <include
+                layout="@layout/home_section_top_rated" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/top_rated_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:paddingTop="14dp"
+                android:paddingBottom="6dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/home_error_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/home_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/home_error_message"
+            android:textColor="@color/auth_text_primary"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/home_retry_button"
+            android:layout_width="180dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/auth_login_button_background"
+            android:backgroundTint="@null"
+            android:text="@string/retry"
+            android:textAllCaps="false"
+            android:textColor="@color/auth_text_primary"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/home_bottom_nav_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="12dp"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/home_label"
+                android:src="@drawable/play"
+                android:tint="@color/home_accent_red" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/home_label"
+                android:textColor="@color/home_accent_red"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_nav_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/search_label"
+                android:src="@drawable/search"
+                android:tint="@color/home_nav_inactive" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/search_label"
+                android:textColor="@color/home_nav_inactive"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/favorites_label"
+                android:src="@drawable/heart"
+                android:tint="@color/home_nav_inactive" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/favorites_label"
+                android:textColor="@color/home_nav_inactive"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/profile_label"
+                android:src="@drawable/profile"
+                android:tint="@color/home_nav_inactive" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/profile_label"
+                android:textColor="@color/home_nav_inactive"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_loading_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/home_loading_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/home_loading"
+            android:textColor="@color/auth_text_primary"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</FrameLayout>

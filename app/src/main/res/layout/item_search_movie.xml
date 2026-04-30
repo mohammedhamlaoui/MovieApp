@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="18dp"
+    android:orientation="vertical"
+    android:paddingStart="6dp"
+    android:paddingEnd="6dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        app:cardBackgroundColor="@color/home_surface"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="#33FFFFFF"
+        app:strokeWidth="1dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/search_movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/movie_poster_placeholder"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/search_movie_more_button"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="7dp"
+                android:background="@drawable/auth_back_button_background"
+                android:contentDescription="More"
+                android:padding="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/more" />
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/search_movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/auth_text_primary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="The Batman" />
+
+    <TextView
+        android:id="@+id/search_movie_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/auth_text_secondary"
+        android:textSize="12sp"
+        tools:text="2022-03-01" />
+
+    <TextView
+        android:id="@+id/search_movie_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/auth_link"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        tools:text="8.1" />
+
+</LinearLayout>

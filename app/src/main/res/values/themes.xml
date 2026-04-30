@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MovieApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/netflix_red</item>
+        <item name="colorSecondary">@color/netflix_red</item>
+        <item name="colorAccent">@color/netflix_red</item>
+    </style>
+
+    <style name="Theme.MovieApp" parent="Base.Theme.MovieApp" />
+</resources>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MovieDetailsActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_auth" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/auth_overlay_background" />
+
+    <ScrollView
+        android:id="@+id/details_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/details_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="32dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="94dp"
+                android:background="@android:color/black">
+
+                <ImageView
+                    android:id="@+id/details_backdrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_auth"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/details_back_button"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/auth_back_button_background"
+                    android:clickable="true"
+                    android:contentDescription="@string/home_label"
+                    android:focusable="true"
+                    android:padding="11dp"
+                    android:src="@drawable/back"
+                    android:tint="@color/auth_text_primary" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="126dp"
+                    android:layout_height="184dp"
+                    app:cardBackgroundColor="@color/home_surface"
+                    app:cardCornerRadius="22dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#33FFFFFF"
+                    app:strokeWidth="1dp">
+
+                    <ImageView
+                        android:id="@+id/details_poster"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/movie_poster_placeholder" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/details_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="serif"
+                        android:maxLines="3"
+                        android:textColor="@color/auth_text_primary"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        tools:text="Dune: Part Two" />
+
+                    <TextView
+                        android:id="@+id/details_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/auth_text_secondary"
+                        android:textSize="15sp"
+                        tools:text="2024" />
+
+                    <TextView
+                        android:id="@+id/details_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/auth_link"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="8.5" />
+
+                    <TextView
+                        android:id="@+id/details_meta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/auth_text_primary"
+                        android:textSize="15sp"
+                        tools:text="166 min" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/details_genres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/auth_link"
+                android:textSize="15sp"
+                tools:text="Science Fiction • Adventure • Drama" />
+
+            <TextView
+                android:id="@+id/details_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="4dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/auth_text_secondary"
+                android:textSize="16sp"
+                tools:text="Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family." />
+
+            <Button
+                android:id="@+id/details_play_button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/auth_login_button_background"
+                android:backgroundTint="@null"
+                android:text="@string/play_now"
+                android:textAllCaps="false"
+                android:textColor="@color/auth_text_primary"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/details_error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="24dp"
+        android:text="@string/details_error_message"
+        android:textColor="@color/auth_text_primary"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/details_loading_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/details_loading_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/details_loading"
+            android:textColor="@color/auth_text_primary"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</FrameLayout>

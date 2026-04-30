@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="auth_back_button_background">#52333A46</color>
+    <color name="auth_divider">#52FFFFFF</color>
+    <color name="auth_hint">#9FB0B5C3</color>
+    <color name="auth_icon_tint">#D6E1E6F0</color>
+    <color name="auth_link">#FFE3BE78</color>
+    <color name="home_accent_red">#FFE50914</color>
+    <color name="home_nav_inactive">#91A2AAB7</color>
+    <color name="home_surface">#F0131620</color>
+    <color name="netflix_red">#FFE50914</color>
+    <color name="auth_text_primary">#FFFFFFFF</color>
+    <color name="auth_text_secondary">#D6D3D8E0</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
